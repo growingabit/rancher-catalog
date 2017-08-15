@@ -1,0 +1,42 @@
+.catalog:
+  name: BTC (full node)
+  version: v1.0.0
+  description: A Bitcoin node that fully validates transactions and blocks.
+  uuid: btc-full-node-0
+  minimum_rancher_version: v1.6.5
+  questions:
+    - variable: PATH_TO_STORAGE
+      label: Path to data storage on host
+      description: >
+        Where to save blockchain data & configs - a volume will be used if nothing is specified here.
+        WARNING! This directory can get pretty large (>150GB)!
+      required: false
+      type: string
+    - variable: RPC_USER
+      label: RPC Username
+      description: The username to access the node's RPC methods with
+      required: true
+      type: string
+    - variable: RPC_PASSWORD
+      label: RPC Password
+      description: The password to access the node's RPC methods with
+      required: true
+      type: password
+    - variable: ENABLE_TESTNET
+      label: Enable Testnet mode
+      description: Run the node on the testnet blockchain instead of the standard one
+      required: true
+      default: 1
+      type: enum
+      options:
+        - 0
+        - 1
+    - variable: DEBUG
+      label: Enable debug output
+      description: Show additional logging
+      required: false
+      default: 1
+      type: enum
+      options:
+        - 0
+        - 1

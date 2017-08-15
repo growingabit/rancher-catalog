@@ -1,0 +1,8 @@
+name: BTC (full node)
+description: |
+  A Bitcoin node that fully validates transactions and blocks.
+version: v1.0.0
+category: Applications
+maintainer: growingabit
+license: AGPL-3.0
+projectURL: https://github.com/growingabit/bitcoin-backend
