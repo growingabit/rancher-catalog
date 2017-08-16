@@ -1,0 +1,15 @@
+version: '2'
+services:
+  ipfs-single-node:
+    image: ipfs/go-ipfs:latest
+    tty: false
+    stdin_open: false
+      ports:
+        - 8081:8080  # TODO: needs config? https://github.com/ipfs/go-ipfs/blob/master/cmd/ipfs/daemon.go#L70
+        - 4001:4001
+        - 5001:5001
+    volumes:
+      - ${PATH_TO_STAGING}:/export
+      - ${PATH_TO_DATA}:/data/ipfs
+    labels:
+      io.rancher.container.pull_image: always

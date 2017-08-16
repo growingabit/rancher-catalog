@@ -1,0 +1,17 @@
+.catalog:
+  name: IPFS (single node)
+  version: v1.0.0
+  description: A peer-to-peer hypermedia protocol to make the web faster, safer, and more open.
+  uuid: ipfs-single-node-0
+  minimum_rancher_version: v1.6.5
+  questions:
+    - variable: PATH_TO_STAGING
+      label: Path to the IPFS staging area on host
+      description: Choose a directory that you want to use to import/export files from IPFS.
+      required: true
+      type: string
+    - variable: PATH_TO_DATA
+      label: Path to the IPFS storage area on host
+      description: Choose a directory to store IPFS files that will persist when you restart the container.
+      required: true
+      type: string
