@@ -4,7 +4,7 @@ services:
     image: btc-full-node  # TODO: fix registry & tag
     environment:
       RPC_USER: ${RPC_USER}
-      RPC_PASSWORD: "RPC_PASSWORD"
+      RPC_PASSWORD: "${RPC_PASSWORD}"
       ENABLE_TESTNET: "${ENABLE_TESTNET}"
       DEBUG: "${DEBUG}"
     tty: false

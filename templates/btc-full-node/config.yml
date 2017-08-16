@@ -5,4 +5,4 @@ version: v1.0.0
 category: Applications
 maintainer: growingabit
 license: AGPL-3.0
-projectURL: https://github.com/growingabit/bitcoin-backend
+projectURL: https://github.com/growingabit/docker-btc-full-node
